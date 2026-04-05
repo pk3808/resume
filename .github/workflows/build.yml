@@ -3,10 +3,10 @@ name: Build and Deploy Resume
 on:
   push:
     branches:
-      - main # Change to 'master' if your main branch is called master
+      - main 
 
 jobs:
-  build_and_deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -17,15 +17,25 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Prepare Deployment Folder
+      - name: Prepare Folder for Pages
         run: |
           mkdir public
           cp main.pdf public/resume.pdf
+          cp main.pdf Resume.pdf
 
-      - name: Deploy PDF to GitHub Pages
+      - name: 1. Deploy Viewable PDF to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
           force_orphan: true
+
+      - name: 2. Create Auto-Downloading Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: latest
+          name: Latest Resume
+          files: Resume.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
