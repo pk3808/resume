@@ -73,10 +73,11 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+% MODIFIED: Added label=\textbullet for standard bullet icons
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 %-------------------------------------------
@@ -110,7 +111,7 @@
     {Software Engineer}{Kolkata, West Bengal}
     {}
     \resumeItemListStart
-      \resumeItem{Architected and deployed 6+ production-grade applications using \textbf{TypeScript, React Native, and Node.js}, maintaining a 100\% on-time delivery rate across complex project lifecycles.}
+     \resumeItem{Architected and deployed 6+ production-grade systems, including \textbf{multi-tenant SaaS platforms, cross-platform interactive apps (Trivia/Social), and automated coding evaluation engines} for Data Science; maintained a 100\% on-time delivery rate using \textbf{TypeScript, React Native, and Node.js}.}
       \resumeItem{Optimized full-stack performance by refining \textbf{Express.js} middleware and database queries, resulting in a \textbf{25\% reduction in API latency} and a 15\% increase in user retention.}
       \resumeItem{\textbf{Honors:} Received the \textbf{"Creative Master"} award for driving innovative design-thinking solutions and bridging the gap between complex technical requirements and user-centric UI/UX.}
     \resumeItemListEnd
@@ -123,25 +124,25 @@
     {\textbf{\href{https://pensieri.ink/}{\underline{Pensieri - AI-Powered Content Ecosystem}}} $|$ \emph{Next.js, Spring Boot, Node.js, MongoDB, Redis, Docker}}{Dec 2025}
     {}
     \resumeItemListStart
-      \resumeItem{Architected a scalable, AI-enhanced blogging and monetization platform built with \textbf{Next.js, Node.js, Spring Boot, and MongoDB}, actively supporting over 1,000+ monthly readers and 10+ published writers. Features a custom rich-text editor, real-time analytics, and an integrated suite of AI tools for dynamic reading and writing assistance.}
-      \resumeItem{Designed a \textbf{Multi-LLM Orchestration} pipeline utilizing model-specific routing to power a contextual reading and authoring suite. Background agents autonomously handle semantic SEO extraction (via Cohere), long-form drafting (via Mistral), and real-time inline editing using a custom load-balanced Groq/Llama failover cluster.}
-      \resumeItem{Engineered a high-performance, asynchronous data pipeline with multi-threaded Java background workers for heavy I/O operations and integrated \textbf{Redis} to cache computationally expensive analytics and algorithmic trending feeds.}
-      \resumeItem{Developed a headless rich-text editor in \textbf{Next.js} with drag-and-drop media embeds and inline AI editing within a responsive \textbf{PWA} container.}
-      \resumeItem{\textbf{\href{https://docs.google.com/document/d/1lKClisqo_on85Njt7X1OkZljsSwYHDN4lg5QE_o3ems/edit?usp=sharing}{\underline{Technical Design Document}}} - detailing the High-Level Architecture (HLD), database ERDs, and API specifications for project scalability.}
+      \resumeItem{Architected a scalable, AI-enhanced blogging and monetization platform built with \textbf{Next.js, Node.js, Spring Boot, and MongoDB}, actively supporting over 1,000+ monthly readers and 10+ published writers.}
+      \resumeItem{Designed a \textbf{Multi-LLM Orchestration} pipeline utilizing model-specific routing to power a contextual reading and authoring suite using a custom load-balanced Groq/Llama failover cluster.}
+      \resumeItem{Engineered a high-performance, asynchronous data pipeline with multi-threaded Java background workers and integrated \textbf{Redis} for caching analytics.}
+      \resumeItem{Developed a headless rich-text editor in \textbf{Next.js} with drag-and-drop media embeds within a responsive \textbf{PWA} container.}
+      \resumeItem{\textbf{\href{https://docs.google.com/document/d/1lKClisqo_on85Njt7X1OkZljsSwYHDN4lg5QE_o3ems/edit?usp=sharing}{\underline{Technical Design Document}}} - detailing the High-Level Architecture (HLD) and API specifications.}
     \resumeItemListEnd
   \resumeProjectHeading
     {\textbf{\href{https://www.npmjs.com/package/r-datetime}{\underline{r-datetime - Headless UI Library}}} $|$ \emph{React, TypeScript, NPM, Rollup.js}}{Jan 2026}
     {}
     \resumeItemListStart
-      \resumeItem{Published a \textbf{zero-dependency} React utility for complex date-time selection; optimized bundle size to \textbf{3KB gzipped} using Rollup.js tree-shaking and custom build pipelines.}
-      \resumeItem{Implemented strict \textbf{TypeScript Generics} and A11Y/Keyboard navigation support, providing a robust, type-safe Developer Experience (DX) for open-source consumers.}
+      \resumeItem{Published a \textbf{zero-dependency} React utility for complex date-time selection; optimized bundle size to \textbf{3KB gzipped} using Rollup.js.}
+      \resumeItem{Implemented strict \textbf{TypeScript Generics} and A11Y/Keyboard navigation support for a robust Developer Experience (DX).}
     \resumeItemListEnd
   \resumeProjectHeading
     {\textbf{\href{https://play.google.com/store/apps/details?id=com.storezee.user}{\underline{Storezee - On-Demand Logistics App}}} $|$ \emph{React Native, Google Maps SDK, Razorpay, Zustand}}{Oct 2025}
    {}
     \resumeItemListStart
-      \resumeItem{Built a multi-sided marketplace for luggage storage; integrated \textbf{Google Maps SDK} for real-time proximity searching and verified partner navigation for 50+ storage hubs.}
-      \resumeItem{Engineered secure booking flows with \textbf{Razorpay} and real-time status tracking via \textbf{Zustand}, ensuring 99.9\% transaction reliability for travelers and storage providers.}
+      \resumeItem{Built a multi-sided marketplace for luggage storage; integrated \textbf{Google Maps SDK} for real-time proximity searching for 50+ storage hubs.}
+      \resumeItem{Engineered secure booking flows with \textbf{Razorpay} and real-time status tracking via \textbf{Zustand}, ensuring 99.9\% transaction reliability.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -151,8 +152,8 @@
   \small{\item{
     \textbf{Languages}{: JavaScript (ES6+), TypeScript, Java, C/C++, HTML5, CSS3} \\
     \textbf{Frontend}{: React.js, React Native (Expo/CLI), Next.js, Orval, Redux, Jest, Zustand, Tailwind CSS, Shadcn UI} \\
-    \textbf{Backend \& DB}{: Node.js, Express.js (Middleware, Auth), Spring Boot, MongoDB (Aggregation), Firebase, Supabase, REST APIs, AWS, Microservice} \\
-    \textbf{AI \& Tooling}{: LLM Integration (OpenAI/Anthropic/Gemini/Cohere/Mistral), Multi-Agent Orchestration, Prompt Engineering, Git, Docker, Postman, Figma, EAS} \\
+    \textbf{Backend \& DB}{: Node.js, Express.js, Spring Boot, MongoDB, Firebase, Supabase, REST APIs, AWS, Microservices} \\
+    \textbf{AI \& Tooling}{: LLM Integration (OpenAI/Anthropic/Gemini), Prompt Engineering, Git, Docker, Postman, Figma, EAS} \\
     \textbf{Core Competencies}{: Scalable Architecture, CI/CD Pipelines, Performance Optimization, Technical Documentation}
   }}
 \end{itemize}
