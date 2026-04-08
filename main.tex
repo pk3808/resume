@@ -30,10 +30,10 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
+% Adjust margins - MODIFIED for equal left/right margins
+\addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
+\addtolength{\textwidth}{1.0in}
 \addtolength{\topmargin}{-.7in}
 \addtolength{\textheight}{1.4in}
 
@@ -73,11 +73,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-% MODIFIED: Added label=\textbullet for standard bullet icons
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet]}
+% MODIFIED: Set specific leftmargin for the 1-step indentation
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, leftmargin=1.2em]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+% MODIFIED: Main headings aligned to the far left (0in)
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 %-------------------------------------------
@@ -123,32 +124,34 @@
   \resumeProjectHeading
     {\textbf{\href{https://pensieri.ink/}{\underline{Pensieri - AI-Powered Content Ecosystem}}} $|$ \emph{Next.js, Spring Boot, Node.js, MongoDB, Redis, Docker}}{Dec 2025}
     {}
-    \resumeItemListStart
+    % MODIFIED: Added 'nosep' to remove all vertical gaps between bullets
+    \begin{itemize}[label=\textbullet, leftmargin=1.2em, nosep]
       \resumeItem{Architected a scalable, AI-enhanced blogging and monetization platform built with Next.js, Node.js, Spring Boot, and MongoDB, actively supporting over 1,000+ monthly readers and 10+ published writers.}
+      \resumeItem{Engineered a high-performance, asynchronous data pipeline featuring \textbf{multi-threaded Java background workers} and a dedicated \textbf{Node.js microservice} for SMTP operations, utilizing \textbf{Redis} for inter-service caching and analytics.}
       \resumeItem{Designed a \textbf{Multi-LLM Orchestration} pipeline utilizing model-specific routing to power a contextual reading and authoring suite using a custom load-balanced Groq/Llama failover cluster.}
-      \resumeItem{Engineered a high-performance, asynchronous data pipeline with multi-threaded Java background workers and integrated \textbf{Redis} for caching analytics.}
-      \resumeItem{Developed a headless rich-text editor in \textbf{Next.js} with drag-and-drop media embeds within a responsive \textbf{PWA} container.}
+     \resumeItem{Engineered Write Pad, a block-based editor featuring a custom-built \textbf{Tiptap/ProseMirror} core with integrated AI writing assistants, drag-and-drop image optimization, and dynamic toolbar states for a seamless authoring experience.}
+      \resumeItem{Developed a global monetization engine integrating \textbf{Razorpay} for domestic Indian transactions and \textbf{Buy Me a Coffee (BMC)} for international supporters, implementing secure webhook listeners to automate subscription lifecycle management.}
       \resumeItem{\textbf{\href{https://docs.google.com/document/d/1lKClisqo_on85Njt7X1OkZljsSwYHDN4lg5QE_o3ems/edit?usp=sharing}{\underline{Technical Design Document}}} - detailing the High-Level Architecture (HLD) and API specifications.}
-    \resumeItemListEnd
-  \resumeProjectHeading
-    {\textbf{\href{https://www.npmjs.com/package/r-datetime}{\underline{r-datetime - Headless UI Library}}} $|$ \emph{React, TypeScript, NPM, Rollup.js}}{Jan 2026}
+    \end{itemize}\vspace{-5pt}
+ \resumeProjectHeading
+    {\textbf{\href{https://www.npmjs.com/package/r-datetime}{\underline{r-datetime - Headless UI Library (NPM package)}}} $|$ \emph{React, TypeScript, NPM, Rollup.js}}{Jan 2026}
     {}
     \resumeItemListStart
-      \resumeItem{Published a \textbf{zero-dependency} React utility for complex date-time selection; optimized bundle size to \textbf{3KB gzipped} using Rollup.js.}
-      \resumeItem{Implemented strict \textbf{TypeScript Generics} and A11Y/Keyboard navigation support for a robust Developer Experience (DX).}
+      \resumeItem{Published a \textbf{zero-dependency}, high-performance React utility for complex date-time selection; optimized the build to a highly-minimized \textbf{3KB gzipped} footprint using Rollup.js.}
+      \resumeItem{Engineered an enterprise-ready feature set including \textbf{IANA Timezone support}, internationalization (Intl API), and a range-selection engine with customizable constraints (min/max/disabled dates).}
+      \resumeItem{Achieved a peak of \textbf{662 weekly downloads} on NPM; implemented strict \textbf{TypeScript Generics} and Tailwind-based dynamic theming to provide a flexible, type-safe Developer Experience (DX).}
     \resumeItemListEnd
   \resumeProjectHeading
     {\textbf{\href{https://play.google.com/store/apps/details?id=com.storezee.user}{\underline{Storezee - On-Demand Logistics App}}} $|$ \emph{React Native, Google Maps SDK, Razorpay, Zustand}}{Oct 2025}
-   {}
+    {}
     \resumeItemListStart
       \resumeItem{Built a multi-sided marketplace for luggage storage; integrated \textbf{Google Maps SDK} for real-time proximity searching for 50+ storage hubs.}
-      \resumeItem{Engineered secure booking flows with \textbf{Razorpay} and real-time status tracking via \textbf{Zustand}, ensuring 99.9\% transaction reliability.}
+      \resumeItem{Developed an event-driven status update system for real-time tracking of luggage transit, synchronizing live states between users and store representatives to ensure end-to-end transparency.}
     \resumeItemListEnd
-\resumeSubHeadingListEnd
 
 %-----------SKILLS-----------
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0in, label={}]
   \small{\item{
     \textbf{Languages}{: JavaScript (ES6+), TypeScript, Java, C/C++, HTML5, CSS3} \\
     \textbf{Frontend}{: React.js, React Native (Expo/CLI), Next.js, Orval, Redux, Jest, Zustand, Tailwind CSS, Shadcn UI} \\
