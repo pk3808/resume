@@ -18,7 +18,6 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
 \usepackage{multicol}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
@@ -30,7 +29,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins - MODIFIED for equal left/right margins
+% Adjust margins - MODIFIED for equal left/right margins & strict single-page layout
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
@@ -73,11 +72,9 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-% MODIFIED: Set specific leftmargin for the 1-step indentation
 \newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, leftmargin=1.2em]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-% MODIFIED: Main headings aligned to the far left (0in)
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
@@ -96,14 +93,6 @@
     \href{https://www.linkedin.com/in/piyush-kumar-724877217/}{\underline{LinkedIn: Piyush Kumar}} ~
     \href{https://github.com/pk3808}{\underline{GitHub: pk3808}}
 \end{center}
-
-%-----------SUMMARY-----------
-\section{Summary}
-\begin{itemize}[leftmargin=0in, label={}]
-  \small{\item{
-    Software \& AI Engineer with experience architecting production-grade SaaS platforms, scalable backend microservices, and intelligent AI applications. Proficient in building enterprise RAG pipelines, agentic workflows, and high-performance web/mobile applications using Python, TypeScript, Next.js, Node.js, and MongoDB Vector Search.
-  }}
-\end{itemize}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -131,15 +120,14 @@
 \section{Projects}
 \resumeSubHeadingListStart
   \resumeProjectHeading
-    {\textbf{\href{https://pensieri.ink/}{\underline{Pensieri - AI Content Ecosystem}}} $|$ \emph{Python, RAG, LangChain, Next.js, Spring Boot, Docker}}{Oct 2025 -- Dec 2025}
+    {\textbf{\href{https://pensieri.ink/}{\underline{Pensieri - AI Content Ecosystem}}} $|$ \emph{Python, RAG, LangChain, Next.js, Spring Boot, Docker}}{Dec 2025 -- Present}
     {}
-    % MODIFIED: Added 'nosep' to remove all vertical gaps between bullets
     \begin{itemize}[label=\textbullet, leftmargin=1.2em, nosep]
-      \resumeItem{Architected a scalable, AI-enhanced blogging and monetization platform built with Next.js, Node.js, Spring Boot, and MongoDB, actively supporting over 1,000+ monthly readers and 10+ published writers.}
-      \resumeItem{Engineered an enterprise \textbf{RAG (Retrieval-Augmented Generation)} pipeline using vector embeddings and semantic search, enabling context-aware document synthesis and intelligent Q\&A over large knowledge bases.}
-      \resumeItem{Implemented an \textbf{Agentic AI} workflow utilizing autonomous tool selection, dynamic function calling, and a \textbf{Multi-LLM Orchestration} engine with failover routing across Groq/Llama-3, OpenAI, and Anthropic models.}
-     \resumeItem{Engineered Write Pad, a block-based editor featuring a custom-built \textbf{Tiptap/ProseMirror} core with integrated AI copilot assistants, drag-and-drop image optimization, and real-time contextual suggestions.}
-      \resumeItem{Engineered a high-performance, asynchronous data pipeline featuring \textbf{multi-threaded Java background workers} and a dedicated \textbf{Node.js microservice} for SMTP operations and Redis caching.}
+      \resumeItem{Architected a scalable, AI-enhanced blogging platform built with Next.js, Node.js, Spring Boot, and MongoDB, actively supporting over 1,000+ monthly readers and 10+ published writers.}
+      \resumeItem{Engineered an enterprise \textbf{RAG (Retrieval-Augmented Generation)} pipeline using vector embeddings and semantic search, enabling context-aware document synthesis and Q\&A over knowledge bases.}
+      \resumeItem{Implemented an \textbf{Agentic AI} workflow utilizing autonomous tool selection, dynamic function calling, and a \textbf{Multi-LLM Orchestration} engine with failover routing across Groq/Llama-3, OpenAI, and Anthropic.}
+      \resumeItem{Engineered Write Pad, a block-based editor featuring a custom-built \textbf{Tiptap/ProseMirror} core with integrated AI copilot assistants, drag-and-drop image optimization, and real-time contextual suggestions.}
+      \resumeItem{Engineered a high-performance data pipeline featuring \textbf{multi-threaded Java background workers} and a dedicated \textbf{Node.js microservice} for SMTP operations and Redis caching.}
     \end{itemize}\vspace{-5pt}
  \resumeProjectHeading
     {\textbf{\href{https://www.npmjs.com/package/r-datetime}{\underline{r-datetime - Headless UI Library (NPM package)}}} $|$ \emph{React, TypeScript, NPM, Rollup.js}}{Dec 2025 -- Jan 2026}
@@ -156,6 +144,7 @@
       \resumeItem{Built a multi-sided marketplace for luggage storage; integrated \textbf{Google Maps SDK} for real-time proximity searching for 50+ storage hubs.}
       \resumeItem{Developed an event-driven status update system for real-time tracking of luggage transit, synchronizing live states between users and store representatives to ensure end-to-end transparency.}
     \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-----------SKILLS-----------
 \section{Technical Skills}
